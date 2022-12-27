@@ -1,0 +1,27 @@
+.image-container {
+  display: flex;
+  position: relative;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background-image: linear-gradient(120deg, #edf2f8, #afbed790);
+  margin: 100px auto;
+  &.dark {
+    background-image: linear-gradient(120deg, #000000, #545454) !important;
+  }
+  img {
+    position: absolute;
+    height: 500px;
+    margin: 0 calc(50% - 200px);
+    bottom: -20px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    height: unset;
+    padding-top: 50%;
+    img {
+      height: 90%;
+      margin: 0 13%;
+    }
+  }
+}
