@@ -38,6 +38,7 @@ const Links = (mode) => {
   });
 };
 const Navbar = ({ mode, changeMode }) => {
+  const [activeMenu, setActiveMenu] = useState(false);
   return (
     <div className={`w-full flex text-black header-container`}>
       <div
@@ -50,7 +51,7 @@ const Navbar = ({ mode, changeMode }) => {
           alt=""
           className="logo"
         />
-        <ul className="flex gap-10">
+        <ul className="flex gap-10 navlink">
           <Links mode={mode} />
         </ul>
 
@@ -59,6 +60,7 @@ const Navbar = ({ mode, changeMode }) => {
             className={`round-container menu flex items-center justify-center ${
               mode === "dark" && "dark"
             }`}
+            onClick={() => setActiveMenu(true)}
           >
             <img src={mode === "light" ? LightMenu : DarkMenu} alt="" />
           </div>
@@ -70,6 +72,14 @@ const Navbar = ({ mode, changeMode }) => {
           >
             <img src={mode === "light" ? Dark : Light} alt="" />
           </div>
+        </div>
+      </div>
+      <div className={`side-menu ${activeMenu && "active"}`}>
+        <div onClick={() => setActiveMenu(false)}>close</div>
+        <div className="flex items-center justify-center w-full">
+          <ul className="gap-10">
+            <Links mode={mode} className={"hello"} />
+          </ul>
         </div>
       </div>
     </div>

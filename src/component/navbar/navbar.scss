@@ -1,7 +1,7 @@
 .header-container {
   height: 100px;
-  align-items: center;
   justify-content: center;
+  // position: relative;
   @media screen and (max-width: 420px) {
     height: 80px;
   }
@@ -47,7 +47,9 @@
       gap: 30px !important;
     }
     @media screen and (max-width: 768px) {
-      display: none;
+      &.navlink {
+        display: none;
+      }
     }
   }
   .round-container {
@@ -79,6 +81,28 @@
     &.dark {
       background-color: #ffffff;
       box-shadow: 0px 20px 30px rgba(255, 255, 255, 0.3);
+    }
+  }
+  .side-menu {
+    position: fixed;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: #00000080;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    transform: translateX(100%);
+
+    &.active {
+      transform: rotateX(0);
+    }
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+    ul {
+      li {
+        color: white !important;
+      }
     }
   }
 }
