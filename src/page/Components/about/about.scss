@@ -1,0 +1,10 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  &.dark-home {
+    background-color: #000000;
+  }
+  &.light-home {
+    background-color: #edf2f8;
+  }
+}

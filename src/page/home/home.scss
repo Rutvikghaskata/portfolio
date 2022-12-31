@@ -1,10 +1,23 @@
 .home {
   display: flex;
   flex-direction: column;
+
   &.dark-home {
     background-color: #000000;
   }
   &.light-home {
     background-color: #edf2f8;
   }
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #ecf4fe;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #323bac;
+  border-radius: 10px;
 }

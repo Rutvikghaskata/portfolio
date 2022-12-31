@@ -2,13 +2,18 @@
   height: 100px;
   justify-content: center;
   // position: relative;
+
   @media screen and (max-width: 420px) {
     height: 80px;
   }
   .container {
     border-bottom: 1px solid #323bac20;
     padding: 0 20px;
-
+    transform: translateY(-100px);
+    transition: all 0.7s ease-in-out;
+    &.animate {
+      transform: translateY(0px);
+    }
     &.dark {
       border-bottom: 1px solid #ffffff50;
     }
@@ -21,6 +26,7 @@
 
   ul {
     height: fit-content;
+    margin-top: 7px;
     li {
       font-family: "Josefin Sans";
       color: #a6a9ce;
@@ -31,25 +37,56 @@
       &.dark {
         color: #ffffff40 !important;
       }
+      &:hover,
+      &.active {
+        color: #323bac;
+        &::before {
+          width: 100%;
+        }
+      }
       &.active {
         color: #323bac;
         &::after {
-          content: "";
-          position: absolute;
           height: 8px;
           width: 8px;
           top: -10px;
           left: calc(50% - 5px);
-          border-radius: 50%;
-          background-color: #323bac;
-          box-shadow: 0px 4px 4px rgba(50, 59, 172, 0.25);
+        }
+        &::before {
+          width: 100%;
         }
       }
       &.active.dark {
         color: white !important;
-        &::after {
+        &::after,
+        &::before {
           background-color: white;
+          box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
         }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        top: 0px;
+        left: calc(50%);
+        border-radius: 50%;
+        background-color: #323bac;
+        box-shadow: 0px 4px 4px rgba(50, 59, 172, 0.25);
+        transition: all 0.5s ease-in-out;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 0%;
+        top: 23px;
+        margin: auto;
+        border-radius: 50%;
+        background-color: #323bac;
+        box-shadow: 0px 4px 4px rgba(50, 59, 172, 0.25);
+        transition: all 0.5s ease-in-out;
       }
     }
     // .nav-link {

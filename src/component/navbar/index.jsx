@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.scss";
 import LightLogo from "../../assets/svg-images/light-logo.svg";
 import DarkLogo from "../../assets/svg-images/dark-logo.svg";
@@ -12,15 +12,15 @@ import CloseWhite from "../../assets/svg-images/close-white.svg";
 
 const LINKS = [
   { name: "HOME", link: "home" },
-  { name: "ABOUT", link: "aout" },
+  { name: "ABOUT", link: "about" },
   { name: "EXPERIENCE", link: "experience" },
   { name: "RESUME", link: "resume" },
   { name: "CONTACT", link: "contact" },
 ];
-const NavLink = ({ name, className, onClick }) => {
+const NavLink = ({ name, className, onClick, link }) => {
   return (
     // <div className="flex items-center flex-col nav-link">
-    <li className={className} onClick={onClick}>
+    <li className={className} onClick={onClick} to={link}>
       {name}
     </li>
     //   <div style={{ height: 10, width: 80 }}>
@@ -39,23 +39,32 @@ const Links = ({ className }) => {
         className={`${active === index ? "active" : ""} ${className}`}
         key={index}
         onClick={() => setActive(index)}
+        link={link.link}
       />
     );
   });
 };
 const Navbar = ({ mode, changeMode }) => {
   const [activeMenu, setActiveMenu] = useState(false);
+  const [animate, setAnimate] = useState(false);
   const DarkMode = () => {
     return mode === "dark" ? true : false;
   };
+  useEffect(() => {
+    setAnimate(true);
+  }, [animate]);
   return (
     <div className={`w-full flex text-black header-container`}>
       <div
         className={`container flex items-center justify-between h-full ${
           DarkMode() && "dark"
-        }`}
+        }  ${animate && "animate"}`}
       >
-        <img src={DarkMode() ? DarkLogo : LightLogo} alt="" className="logo" />
+        <img
+          src={DarkMode() ? DarkLogo : LightLogo}
+          alt=""
+          className="logo cursor-pointer"
+        />
         <ul className="flex gap-10 navlink">
           <Links className={DarkMode() && "dark"} />
         </ul>
