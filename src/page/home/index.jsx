@@ -11,7 +11,7 @@ function Home() {
     <div className={`${mode === "dark" ? "dark-home" : "light-home"} home`}>
       <Navbar mode={mode} changeMode={changeMode} />
       <Hero mode={mode} />
-      <About />
+      <About mode={mode} />
       <Experience />
       <Resume />
     </div>

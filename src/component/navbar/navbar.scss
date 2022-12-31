@@ -1,7 +1,14 @@
 .header-container {
   height: 100px;
   justify-content: center;
-  // position: relative;
+  position: fixed;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+  background-color: #edf2f810;
+
+  &.dark {
+    background-color: #00000020;
+  }
 
   @media screen and (max-width: 420px) {
     height: 80px;
@@ -148,15 +155,15 @@
     height: 100vh;
     width: 100%;
     background-color: #ffffff80;
-    backdrop-filter: blur(5px);
-    z-index: 2;
+    backdrop-filter: blur(10px);
+    z-index: 10;
     transform: translateX(100%);
 
     @media screen and (max-width: 768px) {
       display: flex;
     }
     &.dark {
-      background-color: #00000080;
+      background-color: #0000008d;
     }
     &.active {
       transform: rotateX(0);

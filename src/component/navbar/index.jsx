@@ -54,7 +54,11 @@ const Navbar = ({ mode, changeMode }) => {
     setAnimate(true);
   }, [animate]);
   return (
-    <div className={`w-full flex text-black header-container`}>
+    <div
+      className={`w-full flex text-black header-container ${
+        DarkMode() && "dark"
+      }`}
+    >
       <div
         className={`container flex items-center justify-between h-full ${
           DarkMode() && "dark"
