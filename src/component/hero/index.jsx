@@ -12,6 +12,7 @@ function Hero({ mode }) {
   const DarkMode = mode === "dark" ? true : false;
   return (
     <div className="w-full flex relative container">
+      {DarkMode && <div className="absolute w-[100%] inset-0 gradient-01" />}
       <div className={`image-container ${mode === "dark" && "dark"}`}>
         <img src={Rutvik} alt="" className="image" />
         <div className={`info-card card ${mode === "dark" && "dark"}`}>

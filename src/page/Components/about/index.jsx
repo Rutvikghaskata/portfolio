@@ -4,7 +4,7 @@ import "./about.scss";
 
 const SocialLinks = ({ DarkMode }) => {
   return (
-    <div className="flex md:gap-7 gap-3">
+    <div className="flex md:gap-7 gap-3 ">
       <div
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
@@ -121,8 +121,9 @@ function About({ mode }) {
   return (
     <div
       id="about"
-      className="w-full flex justify-center items-center flex-col about container md:w-9/12"
+      className="w-full flex justify-center items-center flex-col about container md:w-9/12 relative"
     >
+    {DarkMode && <div className="absolute w-[60%] h-[50%] bottom-0 right-0 gradient-01" />}
       <SocialLinks DarkMode={DarkMode} />
       <div className={`md:mt-20 mt-10 head-wrapper ${DarkMode && "dark"}`}>
         <h1 className={`font-semibold title ${DarkMode && "dark"}`}>ABOUT</h1>
@@ -136,7 +137,7 @@ function About({ mode }) {
           >
             RUTVIK GHASKATA
           </h1>
-          <p className={`text-[#999] mt-5 text-justify	md:tracking-widest`}>
+          <p className={`text-[#999] mt-5 text-justify	md:tracking-widest ${DarkMode && 'text-[#ccc]'}`}>
             I am a Software developer with 2+year experience have experience in
             a variety of platforms, including web, mobile, and desktop
             applications. I also offer services such as software architecture,
@@ -144,13 +145,13 @@ function About({ mode }) {
             high-quality solutions that are tailored to meet the specific needs
             of our clients.
           </p>
-          <p className="text-[#999] mt-2 text-justify	md:tracking-widest	">
+          <p className={`text-[#999] mt-3 text-justify	md:tracking-widest ${DarkMode && 'text-[#ccc]'}`}>
             I have experience in web development as well as mobile-app
             development. Currently I’m working in React-js, React-native,
             Angular-js, Nodejs, Next-js.
           </p>
         </div>
-        <div className="md:w-2/4 w-full flex justify-center">
+        <div className="md:w-2/4 md:flex hidden w-full flex justify-center">
           <img src={Rutvik} alt="" className="image" />
         </div>
       </div>
