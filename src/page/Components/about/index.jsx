@@ -124,13 +124,19 @@ function About({ mode }) {
       className="w-full flex justify-center items-center flex-col about container md:w-9/12"
     >
       <SocialLinks DarkMode={DarkMode} />
-      <div className="mt-20 head-wrapper">
-        <h1 className="font-semibold title">ABOUT</h1>
+      <div className={`md:mt-20 mt-10 head-wrapper ${DarkMode && "dark"}`}>
+        <h1 className={`font-semibold title ${DarkMode && "dark"}`}>ABOUT</h1>
       </div>
-      <div className="content w-full flex mt-5 flex-col md:flex-row">
+      <div className="content w-full flex md:mt-5 flex-col md:flex-row">
         <div className="md:w-2/4 w-full p-5">
-          <h1 className="font-semibold text-lg mt-5">RUTVIK GHASKATA</h1>
-          <p className="text-[#999] mt-5 text-justify	tracking-widest	">
+          <h1
+            className={`font-semibold text-lg mt-5 text-center md:text-star ${
+              DarkMode && "text-white"
+            }`}
+          >
+            RUTVIK GHASKATA
+          </h1>
+          <p className={`text-[#999] mt-5 text-justify	md:tracking-widest`}>
             I am a Software developer with 2+year experience have experience in
             a variety of platforms, including web, mobile, and desktop
             applications. I also offer services such as software architecture,
@@ -138,7 +144,7 @@ function About({ mode }) {
             high-quality solutions that are tailored to meet the specific needs
             of our clients.
           </p>
-          <p className="text-[#999] mt-2 text-justify	tracking-widest	">
+          <p className="text-[#999] mt-2 text-justify	md:tracking-widest	">
             I have experience in web development as well as mobile-app
             development. Currently I’m working in React-js, React-native,
             Angular-js, Nodejs, Next-js.

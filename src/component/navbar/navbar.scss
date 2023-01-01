@@ -43,6 +43,12 @@
       cursor: pointer;
       &.dark {
         color: #ffffff40 !important;
+        &:hover {
+          color: #ffffff !important;
+          &::before {
+            background-color: #ffffff !important;
+          }
+        }
       }
       &:hover,
       &.active {
@@ -189,6 +195,9 @@
         li {
           color: white !important;
           &::after {
+            background-color: white;
+          }
+          &::before {
             background-color: white;
           }
         }

@@ -28,6 +28,19 @@
         }
       }
     }
+    @media screen and (max-width: 768px) {
+      svg {
+        height: 15px !important;
+      }
+    }
+    @media screen and (max-width: 577px) {
+      box-shadow: none;
+      height: 35px;
+      width: 35px;
+      svg {
+        height: 12px;
+      }
+    }
   }
   .head-wrapper {
     width: 100%;
@@ -38,9 +51,18 @@
     .title {
       font-size: 30px;
       font-family: "Josefin Sans";
-      z-index: 2;
+      z-index: 1;
       background-color: #edf2f8;
       padding: 0 50px;
+      &.dark {
+        background-color: #000000;
+        color: #ffffff !important;
+      }
+    }
+    &.dark {
+      &::after {
+        background-color: #ffffff63;
+      }
     }
     &::after {
       content: "";
@@ -53,5 +75,9 @@
   }
   .image {
     height: 300px;
+
+    @media screen and (max-width: 577px) {
+      height: 200px;
+    }
   }
 }
