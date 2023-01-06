@@ -17,9 +17,11 @@
     border-bottom: 1px solid #323bac20;
     padding: 0 20px;
     transform: translateY(-100px);
-    transition: all 0.7s ease-in-out;
+    transition: all 1s ease-in-out;
+    opacity: 0;
     &.animate {
       transform: translateY(0px);
+      opacity: 1;
     }
     &.dark {
       border-bottom: 1px solid #ffffff50;
@@ -34,7 +36,7 @@
   ul {
     height: fit-content;
     margin-top: 7px;
-    li {
+    a {
       font-family: "Josefin Sans";
       color: #a6a9ce;
       font-size: 15px;
@@ -51,13 +53,13 @@
         }
       }
       &:hover,
-      &.active {
+      &.activeTab {
         color: #323bac;
         &::before {
           width: 100%;
         }
       }
-      &.active {
+      &.activeTab {
         color: #323bac;
         &::after {
           height: 8px;
@@ -69,7 +71,7 @@
           width: 100%;
         }
       }
-      &.active.dark {
+      &.activeTab.dark {
         color: white !important;
         &::after,
         &::before {
@@ -171,7 +173,7 @@
     &.dark {
       background-color: #0000008d;
     }
-    &.active {
+    &.activeTab {
       transform: rotateX(0);
     }
     .close-btn {
@@ -181,7 +183,9 @@
       cursor: pointer;
     }
     ul {
-      li {
+      display: flex;
+      flex-direction: column;
+      a {
         color: #323bac !important;
         font-size: 20px;
         text-align: center;
@@ -192,7 +196,7 @@
         }
       }
       &.dark {
-        li {
+        a {
           color: white !important;
           &::after {
             background-color: white;

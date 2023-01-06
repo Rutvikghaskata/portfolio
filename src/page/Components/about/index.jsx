@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Rutvik from "../../../assets/svg-images/rutvik.svg";
 import "./about.scss";
 
 const SocialLinks = ({ DarkMode }) => {
+  const [animate, setAnimate] = useState(true);
+  useEffect(() => {setTimeout(() =>setAnimate(false),4000)}, [])
   return (
     <div className="flex md:gap-7 gap-3 ">
-      <div
+      <a
+        href="https://www.facebook.com/rutvik.ghaskata/"
+        target="_blank"
+        rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        }`}
+        } ${animate && 'facebook'}`}
       >
         <svg
           width="12"
@@ -24,11 +29,14 @@ const SocialLinks = ({ DarkMode }) => {
             fill="#323BAC"
           />
         </svg>
-      </div>
-      <div
+      </a>
+      <a
+        href="https://www.instagram.com/rutvikghaskata_18/"
+        target="_blank"
+        rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        }`}
+        } ${animate && 'instagram'}`}
       >
         <svg
           width="24"
@@ -50,11 +58,14 @@ const SocialLinks = ({ DarkMode }) => {
             fill="#323BAC"
           />
         </svg>
-      </div>
-      <div
+      </a>
+      <a
+        href="https://www.instagram.com/rutvikghaskata_18/"
+        target="_blank"
+        rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        }`}
+        } ${animate && 'twitter'}`}
       >
         <svg
           width="24"
@@ -68,11 +79,14 @@ const SocialLinks = ({ DarkMode }) => {
             fill="#323BAC"
           />
         </svg>
-      </div>
-      <div
+      </a>
+      <a
+        href="https://www.instagram.com/rutvikghaskata_18/"
+        target="_blank"
+        rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        }`}
+        } ${animate && 'telegram'}`}
       >
         <svg
           width="24"
@@ -86,11 +100,14 @@ const SocialLinks = ({ DarkMode }) => {
             fill="#323BAC"
           />
         </svg>
-      </div>
-      <div
+      </a>
+      <a
+        href="https://www.linkedin.com/in/rutvik-ghaskata-5a2097221/"
+        target="_blank"
+        rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        }`}
+        } ${animate && 'linkedin'}`}
       >
         <svg
           width="22"
@@ -112,7 +129,7 @@ const SocialLinks = ({ DarkMode }) => {
             fill="#323BAC"
           />
         </svg>
-      </div>
+      </a>
     </div>
   );
 };
@@ -151,7 +168,7 @@ function About({ mode }) {
             Angular-js, Nodejs, Next-js.
           </p>
         </div>
-        <div className="md:w-2/4 md:flex hidden w-full flex justify-center">
+        <div className="md:w-2/4 md:flex hidden w-full  justify-center">
           <img src={Rutvik} alt="" className="image" />
         </div>
       </div>

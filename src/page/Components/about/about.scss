@@ -4,11 +4,16 @@
     box-shadow:inset 2px 2px 2px 0px #323bac30,
     7px 7px 20px 0px rgba(0,0,0,.1),
     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 1s ease-in-out;
+    background-color:#edf2f8;
+    opacity: 1;
     &.dark {
       border: 1px solid #c2c2c2;
       box-shadow:inset 2px 2px 2px 0px #ffffff60,
       7px 7px 20px 0px rgba(255, 255, 255, 0.1),
       4px 4px 5px 0px rgba(255, 255, 255, 0.1);
+      background-color:transparent;
+
       svg {
         height: 15px !important;
         path {
@@ -46,6 +51,25 @@
       svg {
         height: 12px;
       }
+    }
+    &.facebook{
+      transform: translateX(151px);
+      opacity: 0;
+    }
+    &.instagram{
+      transform: translateX(76px);
+      opacity: 0;
+    }
+    &.twitter{
+      opacity: 0;
+    }
+    &.telegram{
+      transform: translateX(-76px);
+      opacity: 0;
+    }
+    &.linkedin{
+      transform: translateX(-151px);
+      opacity: 0;
     }
   }
   .head-wrapper {

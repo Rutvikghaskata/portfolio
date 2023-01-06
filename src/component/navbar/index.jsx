@@ -8,6 +8,7 @@ import LightMenu from "../../assets/svg-images/light-menu.svg";
 import DarkMenu from "../../assets/svg-images/dark-menu.svg";
 import CloseBlue from "../../assets/svg-images/close-blue.svg";
 import CloseWhite from "../../assets/svg-images/close-white.svg";
+import { Link } from "react-scroll";
 // import NavWhiteLine from "../../assets/svg-images/nav-line-white.svg";
 
 const LINKS = [
@@ -20,9 +21,9 @@ const LINKS = [
 const NavLink = ({ name, className, onClick, link }) => {
   return (
     // <div className="flex items-center flex-col nav-link">
-    <li className={className} onClick={onClick} to={link}>
+    <Link className={className} onClick={onClick} to={link} spy={true} smooth={true}>
       {name}
-    </li>
+    </Link>
     //   <div style={{ height: 10, width: 80 }}>
     //     <img src={NavWhiteLine} alt="" className="nav-line" />
     //   </div>
@@ -36,7 +37,7 @@ const Links = ({ className }) => {
     return (
       <NavLink
         name={link.name}
-        className={`${active === index ? "active" : ""} ${className}`}
+        className={`${active === index ? "activeTab" : ""} ${className}`}
         key={index}
         onClick={() => setActive(index)}
         link={link.link}
@@ -64,11 +65,13 @@ const Navbar = ({ mode, changeMode }) => {
           DarkMode() && "dark"
         }  ${animate && "animate"}`}
       >
-        <img
-          src={DarkMode() ? DarkLogo : LightLogo}
-          alt=""
-          className="logo cursor-pointer"
-        />
+        <Link to={'home'} spy={true} smooth={true}>
+          <img
+            src={DarkMode() ? DarkLogo : LightLogo}
+            alt=""
+            className="logo cursor-pointer"
+          /> 
+        </Link>
         <ul className="flex gap-10 navlink">
           <Links className={DarkMode() && "dark"} />
         </ul>
@@ -93,7 +96,7 @@ const Navbar = ({ mode, changeMode }) => {
         </div>
       </div>
       <div
-        className={`side-menu ${activeMenu && "active"} ${
+        className={`side-menu ${activeMenu && "activeTab"} ${
           DarkMode() && "dark"
         }`}
       >
