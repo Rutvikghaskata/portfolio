@@ -1,0 +1,202 @@
+.about {
+    .head-wrapper {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .title {
+        font-size: 30px;
+        font-family: "Josefin Sans";
+        z-index: 1;
+        background-color: #edf2f8;
+        padding: 0 50px;
+        &.dark {
+          background-color: transparent;
+          color: #ffffff !important;
+          @media screen and (max-width: 768px) {
+          background-color: transparent;
+          }
+        }
+        @media screen and (max-width:577px) {
+            font-size: 20px;
+        }
+      }
+      &.dark {
+        &::after {
+          width: 0;
+        }
+        
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #323bac24;
+        margin-top: -6px;
+        
+      }
+    }
+    .image {
+      height: 300px;
+  
+      @media screen and (max-width: 577px) {
+        height: 200px;
+      }
+    }
+    .tech-card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.react{
+          background-image: radial-gradient(transparent,#00D8FF30);
+          img{height: 40px;}
+        }
+        &.node{
+            background-image: radial-gradient(transparent,#689F6330);
+            img{height: 35px}
+        }
+        &.js{
+            background-image: radial-gradient(transparent,#F7DF1E30);
+            img{height: 30px;}
+        }
+        &.angular{
+            background-image: radial-gradient(transparent,#DE364130);
+            img{height: 37px;}
+        }
+        &.next{
+            background-image: radial-gradient(transparent,#00000030);
+            img{height: 36px;}
+        }
+        &.html{
+            background-image: radial-gradient(transparent,#E44D2630);
+            img{height: 40px;}
+        }
+        &.vuejs{
+            background-image: radial-gradient(transparent,#41B88330);
+            img{margin-top: 5px;height: 37px;}
+        }
+        @media screen and (max-width:577px) {
+            height: 60px;
+            width: 60px;
+        }
+    }
+    .first-line{
+       &::before{
+        content: '';
+        position:absolute;
+        height: 0px;
+        width: 1.5px;
+        top:27px;
+        left:17px;
+        background-color: #323bac;
+        transition: all 1s ease-in-out;
+       }
+       &::after{
+        content: '';
+        position:absolute;
+        height:8px;
+        width:8px;
+        border-radius: 50%;
+        top:25px;
+        left:13.5px;
+        background-color: #323bac;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+       }
+       &.active{
+         &::before{
+            height: 60px;
+         }
+         &::after{
+            opacity: 1;
+            top:calc(22px + 60px);
+         }
+       }
+    }
+    .second-line{
+        &::before{
+         content: '';
+         position:absolute;
+         height: 0px;
+         width: 1.5px;
+         top:120px;
+         left:17px;
+         background-color: #323bac;
+         transition: all 1.5s ease-in-out;
+        }
+        &::after{
+         content: '';
+         position:absolute;
+         height:8px;
+         width:8px;
+         border-radius: 50%;
+         top:120px;
+         left:13.5px;
+         background-color: #323bac;
+         transition: all 1.5s ease-in-out;
+         opacity: 0;
+        }
+        &.active{
+          &::before{
+             height: 150px;
+          }
+          &::after{
+             opacity: 1;
+             top:calc(150px + 120px);
+          }
+        }
+     }
+     .third-line{
+        &::before{
+         content: '';
+         position:absolute;
+         height: 0px;
+         width: 1.5px;
+         top:310px;
+         left:17px;
+         background-color: #323bac;
+         transition: all 1.5s ease-in-out;
+        }
+        &::after{
+         content: '';
+         position:absolute;
+         height:8px;
+         width:8px;
+         border-radius: 50%;
+         top:310px;
+         left:13.5px;
+         background-color: #323bac;
+         transition: all 1.5s ease-in-out;
+         opacity: 0;
+        }
+        &.active{
+          &::before{
+             height: 75px;
+          }
+          &::after{
+             opacity: 1;
+             top:calc(75px + 310px);
+          }
+        }
+     }
+  }
+  .gradient-01 {
+      background-image: linear-gradient(
+        270deg,
+        rgba(209, 35, 225, 0.192) 0%,
+      rgba(208, 138, 234, 0.256) 26%,
+      rgba(208, 194, 244, 0.266) 39%,
+      rgba(206, 236, 253, 0.347) 50%,
+      rgba(169, 200, 244, 0.395) 61%,
+      rgba(123, 158, 234, 0.344) 74%,
+      rgba(35, 98, 225, 0.337) 100%
+      );
+      filter: blur(125px);
+    }

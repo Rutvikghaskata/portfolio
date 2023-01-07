@@ -154,7 +154,7 @@ function About({ mode }) {
           >
             RUTVIK GHASKATA
           </h1>
-          <p className={`text-[#999] mt-5 text-justify	md:tracking-widest ${DarkMode && 'text-[#ccc]'}`}>
+          <p className={`text-[#999] mt-5 text-justify	md:tracking-[.5px] ${DarkMode && 'text-[#ccc]'}`}>
             I am a Software developer with 2+year experience have experience in
             a variety of platforms, including web, mobile, and desktop
             applications. I also offer services such as software architecture,
@@ -162,7 +162,7 @@ function About({ mode }) {
             high-quality solutions that are tailored to meet the specific needs
             of our clients.
           </p>
-          <p className={`text-[#999] mt-3 text-justify	md:tracking-widest ${DarkMode && 'text-[#ccc]'}`}>
+          <p className={`text-[#999] mt-3 text-justify	md:tracking-[.5px] ${DarkMode && 'text-[#ccc]'}`}>
             I have experience in web development as well as mobile-app
             development. Currently I’m working in React-js, React-native,
             Angular-js, Nodejs, Next-js.

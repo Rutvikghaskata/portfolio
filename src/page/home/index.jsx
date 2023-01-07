@@ -12,7 +12,7 @@ function Home() {
       <Navbar mode={mode} changeMode={changeMode} />
       <Hero mode={mode} />
       <About mode={mode} />
-      <Experience />
+      <Experience mode={mode}/>
       <Resume />
     </div>
   );
