@@ -13,7 +13,7 @@ function Home() {
       <Hero mode={mode} />
       <About mode={mode} />
       <Experience mode={mode}/>
-      <Resume />
+      <Resume mode={mode}/>
     </div>
   );
 }

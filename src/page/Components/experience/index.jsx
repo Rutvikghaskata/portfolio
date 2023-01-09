@@ -117,14 +117,14 @@ const Experience = ({ mode }) => {
       className="w-full flex justify-center items-center flex-col about container md:w-9/12 relative"
     >
       {DarkMode && (
-        <div className="absolute w-[60%] h-[50%] bottom-0 right-0 gradient-01" />
+        <div className="absolute w-[70%] h-[50%] bottom-0 right-auto gradient-01" />
       )}
       <div className={`md:mt-20 mt-10 head-wrapper ${DarkMode && "dark"}`}>
         <h1 className={`font-semibold title ${DarkMode && "dark"}`}>
           SKILL & EXPERIENCE
         </h1>
       </div>
-      <div className="content w-full flex md:mt-5 flex-col md:flex-row">
+      <div className="content w-full flex md:mt-10 flex-col md:flex-row">
         <Technologies />
         <ExperienceDetails DarkMode={DarkMode}/>
       </div>

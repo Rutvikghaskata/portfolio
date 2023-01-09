@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Rutvik from "../../../assets/svg-images/rutvik.svg";
+import Rutvik from "../../../assets/svg-images/rutvik.png";
 import "./about.scss";
 
 const SocialLinks = ({ DarkMode }) => {
