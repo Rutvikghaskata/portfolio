@@ -2,12 +2,13 @@ import React from "react";
 import "./contact.scss";
 import Mail from '../../../assets/svg-images/mail.svg'
 import Mobile from '../../../assets/svg-images/mobile.svg'
+import TextInput from "../InputText";
 
 const Contact = ({ mode }) => {
   const DarkMode = mode === "dark" ? true : false;
   return (
     <div
-      id="qualification"
+      id="contact"
       className="w-full flex justify-center items-center flex-col qualification container md:w-9/12 relative"
     >
       {DarkMode && (
@@ -18,7 +19,7 @@ const Contact = ({ mode }) => {
         CONTACT
         </h1>
       </div>
-      <div className="w-full flex mt-10 flex-col md:flex-row content items-center justify-center md:gap-10 gap-5 relative">
+      <div className="w-full flex md:mt-20 mt-10 flex-col md:flex-row content items-center justify-center md:gap-10 gap-5 relative">
          <div className={`bg-white rounded-[14px] py-[18px] pl-[23px] pr-[55px] ${DarkMode && "dark"} contact-card`}>
            <div className="flex  items-center">
              <img src={Mail} alt="" className="h-[40px]"/>
@@ -32,6 +33,18 @@ const Contact = ({ mode }) => {
            </div>
          </div>
       </div>
+      <div className="flex md:flex-row md:gap-0 gap-10 flex-col w-full my-10 justify-between items-center">
+        <div className="md:w-[30%] w-[70%]">
+          <TextInput placeholder="NAME"/>
+        </div>
+        <div className="md:w-[30%] w-[70%]">
+          <TextInput placeholder="EMAIL ADDRESS"/>
+        </div>
+        <div className="md:w-[30%] w-[70%]">
+          <TextInput placeholder="SUBJECT"/>
+        </div>
+      </div>
+      <button className="text-[#323bac] font-semibold underline">SUBMIT</button>
     </div>
   );
 };

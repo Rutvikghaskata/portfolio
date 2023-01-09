@@ -1,0 +1,44 @@
+.about {
+    .head-wrapper {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .title {
+        font-size: 30px;
+        font-family: "Josefin Sans";
+        z-index: 1;
+        background-color: #edf2f8;
+        padding: 0 50px;
+        &.dark {
+          background-color: transparent;
+          color: #ffffff !important;
+          @media screen and (max-width: 768px) {
+          background-color: transparent;
+          }
+        }
+        @media screen and (max-width:577px) {
+            font-size: 20px;
+        }
+      }
+      &.dark {
+        &::after {
+          width: 0;
+        }
+        
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #323bac24;
+        margin-top: -6px;
+        
+      }
+    }
+    .button{
+        box-shadow: 0px 15px 35px rgba(50, 59, 172, 0.3);
+    }
+  }
