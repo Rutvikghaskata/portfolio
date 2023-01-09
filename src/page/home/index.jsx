@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, Hero } from "../../component";
-import { About, Experience, Resume } from "../Components";
+import { About, Experience, Qualification, Resume, Contact } from "../Components";
 import "./home.scss";
 
 function Home() {
@@ -14,6 +14,8 @@ function Home() {
       <About mode={mode} />
       <Experience mode={mode}/>
       <Resume mode={mode}/>
+      <Qualification mode={mode} />
+      <Contact mode={mode}/>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Rutvik from "../../../assets/svg-images/rutvik.png";
+import Rutvik from "../../../assets/svg-images/resume-rutvik-image.svg";
 import MyResume from "../../../assets/document/rutikghaskata.pdf";
 import "./resume.scss";
 
@@ -16,7 +16,7 @@ const Resume = ({ mode }) => {
       <div className={`md:mt-20 mt-10 head-wrapper ${DarkMode && "dark"}`}>
         <h1 className={`font-semibold title ${DarkMode && "dark"}`}>RESUME</h1>
       </div>
-      <div className="content w-full flex md:mt-10 flex-col md:flex-row">
+      <div className="content w-full flex md:mt-10 flex-col md:flex-row py-10">
         <div className="md:w-2/5 md:flex hidden w-full  justify-start">
           <img src={Rutvik} alt="" className="image" />
         </div>

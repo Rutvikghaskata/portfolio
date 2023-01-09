@@ -3,12 +3,13 @@ import "./experience.scss";
 import ReactJS from "../../../assets/svg-images/reactjs.svg";
 import JavaScript from "../../../assets/svg-images/javascript.svg";
 import NextJs from "../../../assets/svg-images/nextjs.svg";
+import NextJsWhite from "../../../assets/svg-images/nextjs-white.svg";
 import AngularJs from "../../../assets/svg-images/angularjs.svg";
 import NodeJs from "../../../assets/svg-images/node.svg";
 import Html from "../../../assets/svg-images/html.svg";
 import VueJS from "../../../assets/svg-images/vuejs.svg";
 
-const Technologies = () => {
+const Technologies = ({DarkMode}) => {
   return (
     <div className="md:w-2/4 w-full">
       <div className="flex gap-6 items-center justify-center mt-10 md:mt-0">
@@ -26,8 +27,8 @@ const Technologies = () => {
         <div className="tech-card angular">
           <img src={AngularJs} alt="" />
         </div>
-        <div className="tech-card next">
-          <img src={NextJs} alt="" />
+        <div className={`tech-card next ${DarkMode && 'white-icon'}`}>
+          <img src={ DarkMode ? NextJsWhite :NextJs} alt="" />
         </div>
         <div className="tech-card html">
           <img src={Html} alt="" />
@@ -114,7 +115,7 @@ const Experience = ({ mode }) => {
   return (
     <div
       id="experience"
-      className="w-full flex justify-center items-center flex-col about container md:w-9/12 relative"
+      className="w-full flex justify-center items-center flex-col experience container md:w-9/12 relative"
     >
       {DarkMode && (
         <div className="absolute w-[70%] h-[50%] bottom-0 right-auto gradient-01" />
@@ -124,8 +125,8 @@ const Experience = ({ mode }) => {
           SKILL & EXPERIENCE
         </h1>
       </div>
-      <div className="content w-full flex md:mt-10 flex-col md:flex-row">
-        <Technologies />
+      <div className="w-full flex md:mt-10 flex-col md:flex-row content">
+        <Technologies DarkMode={DarkMode}/>
         <ExperienceDetails DarkMode={DarkMode}/>
       </div>
     </div>
