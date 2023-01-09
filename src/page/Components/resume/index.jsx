@@ -1,5 +1,6 @@
 import React from "react";
 import Rutvik from "../../../assets/svg-images/rutvik.png";
+import MyResume from "../../../assets/document/rutikghaskata.pdf";
 import "./resume.scss";
 
 const Resume = ({ mode }) => {
@@ -41,7 +42,7 @@ const Resume = ({ mode }) => {
           >
            A software developer is a professional who is responsible for designing and building computer programs
           </p>
-          <a className="bg-[#323BAC] text-white text-[15px] px-7 py-2 rounded-full button" href="hello" download>
+          <a className="bg-[#323BAC] text-white text-[15px] px-7 py-2 rounded-full button" href={MyResume} target="_blank" rel="noreferrer">
             DOWNLOAD CV
           </a>
         </div>
