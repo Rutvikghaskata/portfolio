@@ -60,7 +60,7 @@ const SocialLinks = ({ DarkMode }) => {
         </svg>
       </a>
       <a
-        href="https://www.instagram.com/rutvikghaskata_18/"
+        href="https://twitter.com/RutvikGhaskata"
         target="_blank"
         rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
