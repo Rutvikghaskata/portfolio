@@ -50,3 +50,39 @@
     }
   }
 }
+
+.Notification {
+  position: fixed;
+  padding: 30px;
+  max-width: 350px;
+  top: 10px;
+  right: -350px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.775);
+  backdrop-filter: blur(5px);
+  // border-radius: 10px;
+  border: 1px solid #323aac;
+  // transition: all 0.2s linear;
+  opacity: 0;
+
+  p {
+    text-align: center;
+    color: #323bac;
+    font-weight: 600;
+  }
+
+  svg {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    background-color: #323aac;
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+  &.active {
+    right: 10px;
+    opacity: 1;
+  }
+}

@@ -142,7 +142,7 @@ const Footer = ({ mode }) => {
         !DarkMode ? "bg-[#323bac]" : "bg-[transparent] dark"
       } mt-10`}
     >
-      <div className="container flex justify-between items-center h-full">
+      <div className="container flex flex-col justify-center gap-5 sm:flex-row sm:justify-between items-center h-full px-5">
         <Link to={"home"} spy={true} smooth={true}>
           <img src={DarkLogo} alt="" className="logo cursor-pointer" />
           <p className={`font-light text-[white] `}>

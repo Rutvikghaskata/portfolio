@@ -7,4 +7,9 @@
   &.dark {
     border-top: 1px solid #fff9;
   }
+  @media screen and (max-width: 768px) {
+    .icon svg {
+      height: 15px !important;
+    }
+  }
 }
