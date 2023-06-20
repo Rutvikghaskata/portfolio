@@ -1,18 +1,17 @@
 .about {
   .icon {
     border: 1px solid #323bac50;
-    box-shadow:inset 2px 2px 2px 0px #323bac30,
-    7px 7px 20px 0px rgba(0,0,0,.1),
-    4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px #323bac30,
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     transition: all 1s ease-in-out;
-    background-color:#edf2f8;
+    background-color: #edf2f8;
     opacity: 1;
     &.dark {
       border: 1px solid #c2c2c2;
-      box-shadow:inset 2px 2px 2px 0px #ffffff60,
-      7px 7px 20px 0px rgba(255, 255, 255, 0.1),
-      4px 4px 5px 0px rgba(255, 255, 255, 0.1);
-      background-color:transparent;
+      box-shadow: inset 2px 2px 2px 0px #ffffff60,
+        7px 7px 20px 0px rgba(255, 255, 255, 0.1),
+        4px 4px 5px 0px rgba(255, 255, 255, 0.1);
+      background-color: transparent;
 
       svg {
         height: 15px !important;
@@ -22,7 +21,7 @@
       }
       &:hover {
         background-color: #e4e4e4;
-        box-shadow:inset 2px 2px 2px 0px #00000040;
+        box-shadow: inset 2px 2px 2px 0px #00000040;
         svg {
           path {
             fill: black;
@@ -32,7 +31,7 @@
     }
     &:hover {
       background-color: #323bac;
-      box-shadow:inset 2px 2px 2px 0px #7276ac;
+      box-shadow: inset 2px 2px 2px 0px #7276ac;
       svg {
         path {
           fill: white;
@@ -52,22 +51,22 @@
         height: 12px;
       }
     }
-    &.facebook{
+    &.facebook {
       transform: translateX(151px);
       opacity: 0;
     }
-    &.instagram{
+    &.instagram {
       transform: translateX(76px);
       opacity: 0;
     }
-    &.twitter{
+    &.twitter {
       opacity: 0;
     }
-    &.telegram{
+    &.telegram {
       transform: translateX(-76px);
       opacity: 0;
     }
-    &.linkedin{
+    &.linkedin {
       transform: translateX(-151px);
       opacity: 0;
     }
@@ -78,6 +77,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fade ease-in-out;
+    animation-play-state: running;
+    animation-duration: 1s;
     .title {
       font-size: 30px;
       font-family: "Josefin Sans";
@@ -88,7 +90,7 @@
         background-color: transparent;
         color: #ffffff !important;
         @media screen and (max-width: 768px) {
-        background-color: transparent;
+          background-color: transparent;
         }
       }
     }
@@ -96,7 +98,6 @@
       &::after {
         width: 0;
       }
-      
     }
     &::after {
       content: "";
@@ -105,14 +106,41 @@
       height: 1px;
       background-color: #323bac24;
       margin-top: -6px;
-      
     }
   }
+  .about-content {
+    animation: smallfade ease-in-out;
+    animation-play-state: running;
+    animation-duration: 1s;
+  }
+
   .image {
     height: 300px;
 
     @media screen and (max-width: 577px) {
       height: 200px;
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes smallfade {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }

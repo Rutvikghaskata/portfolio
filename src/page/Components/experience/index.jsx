@@ -7,78 +7,101 @@ import NextJsWhite from "../../../assets/svg-images/nextjs-white.svg";
 import AngularJs from "../../../assets/svg-images/angularjs.svg";
 import NodeJs from "../../../assets/svg-images/node.svg";
 import Html from "../../../assets/svg-images/html.svg";
-import VueJS from "../../../assets/svg-images/vuejs.svg";
+import CSS from "../../../assets/svg-images/css.svg";
+import GitHub from "../../../assets/svg-images/github.svg";
+import SCSS from "../../../assets/svg-images/scss.svg";
 
-const Technologies = ({DarkMode}) => {
+const Technologies = ({ DarkMode }) => {
   return (
     <div className="md:w-2/4 w-full">
       <div className="flex gap-6 items-center justify-center mt-10 md:mt-0">
-        <div className="tech-card react ">
+        <div className="tech-card react" title="Reactjs & React-Native">
           <img src={ReactJS} alt="" />
         </div>
-        <div className="tech-card node">
+        <div className="tech-card node" title="NodeJs">
           <img src={NodeJs} alt="" />
         </div>
-        <div className="tech-card js">
+        <div className="tech-card js" title="Javascript">
           <img src={JavaScript} alt="" />
         </div>
       </div>
       <div className="flex gap-6 items-center justify-center my-5">
-        <div className="tech-card angular">
+        <div className="tech-card angular" title="Angular">
           <img src={AngularJs} alt="" />
         </div>
-        <div className={`tech-card next ${DarkMode && 'white-icon'}`}>
-          <img src={ DarkMode ? NextJsWhite :NextJs} alt="" />
+        <div
+          className={`tech-card next ${DarkMode && "white-icon"}`}
+          title="nextjs"
+        >
+          <img src={DarkMode ? NextJsWhite : NextJs} alt="" />
         </div>
-        <div className="tech-card html">
+        <div className="tech-card html" title="Html">
           <img src={Html} alt="" />
         </div>
       </div>
       <div className="flex gap-6 items-center justify-center">
-        <div className="tech-card vuejs">
-          <img src={VueJS} alt="" />
+        <div className="tech-card css" title="Css">
+          <img src={CSS} alt="" />
+        </div>
+        <div className="tech-card scss" title="Scss">
+          <img src={SCSS} alt="" />
+        </div>
+        <div className="tech-card github" title="Github">
+          <img src={GitHub} alt="" />
         </div>
       </div>
     </div>
   );
 };
 
-const ExperienceDetails = ({DarkMode}) => {
-  const [first,setFirst] = useState(false);
-  const [second,setSecond] = useState(false);
-  const [third,setThird] = useState(false);
+const ExperienceDetails = ({ DarkMode }) => {
+  const [first, setFirst] = useState(false);
+  const [third, setThird] = useState(false);
 
-  useEffect(()=>{
-    setTimeout(()=>setFirst(true),1000)
-    setTimeout(()=>setSecond(true),2000)
-    setTimeout(()=>setThird(true),3500)
-  })
+  useEffect(() => {
+    setTimeout(() => setFirst(true), 1000);
+    setTimeout(() => setThird(true), 2000);
+  });
   return (
     <div className="md:w-2/4 flex w-full md:justify-start justify-center mt-16 md:mt-0">
       <div className="relative">
-        <div className={`flex first-line ${first && 'active'}`}>
-          <p className={`text-[#323bac] font-semibold tracking-[2px] ${DarkMode && 'text-[#525BCC]'}`}>2022</p>
+        <div className={`flex first-line ${first && "active"}`}>
+          <p
+            className={`text-[#323bac] font-semibold tracking-[2px] ${
+              DarkMode && "text-[#525BCC]"
+            }`}
+          >
+            2023
+          </p>
           <div className="ml-10">
-            <h3 className={`text-[18px] font-semibold ${DarkMode && 'text-[#fff]'}`}>
-              Senior FullStack Developer
+            <h3
+              className={`text-[18px] font-semibold ${
+                DarkMode && "text-[#fff]"
+              }`}
+            >
+              FullStack Developer
             </h3>
             <p className="text-[12px] text-[#C6C6C6] tracking-[1.5px]">
               DVIJ-INFOTECH
             </p>
           </div>
         </div>
-        <div className={`flex second-line ${second && 'active'} mt-12`}>
-          <p className={`text-[#323bac] font-semibold tracking-[2px] ${DarkMode && 'text-[#525BCC]'}`}>2021</p>
+        <div className={`flex third-line ${third && "active"}`}>
+          <p
+            className={`text-[#323bac] font-semibold tracking-[2px] ${
+              DarkMode && "text-[#525BCC]"
+            }`}
+          >
+            2022
+          </p>
           <div className="ml-10">
             <div>
-              <h3 className={`text-[18px] font-semibold ${DarkMode && 'text-[#fff]'}`}>Frontend Developer</h3>
-              <p className="text-[12px] text-[#C6C6C6] tracking-[1.5px]">
-                DVIJ-INFOTECH
-              </p>
-            </div>
-            <div>
-              <h3 className={`text-[18px] mt-12 font-semibold ${DarkMode && 'text-[#fff]'}`}>
-                Mobile-app Developer
+              <h3
+                className={`text-[18px] font-semibold ${
+                  DarkMode && "text-[#fff]"
+                }`}
+              >
+                Frontend Developer
               </h3>
               <p className="text-[12px] text-[#C6C6C6] tracking-[1.5px]">
                 DVIJ-INFOTECH
@@ -86,18 +109,22 @@ const ExperienceDetails = ({DarkMode}) => {
             </div>
           </div>
         </div>
-        <div className={`flex third-line ${third  && 'active'} mt-12`}>
-          <p className={`text-[#323bac] font-semibold tracking-[2px] ${DarkMode && 'text-[#525BCC]'}`}>2020</p>
-          <div className="ml-9">
+        <div className={'flex mt-20'}>
+          <p
+            className={`text-[#323bac] font-semibold tracking-[2px] ${
+              DarkMode && "text-[#525BCC]"
+            }`}
+          >
+            2021
+          </p>
+          <div className="ml-10">
             <div>
-              <h3 className={`text-[18px] font-semibold ${DarkMode && 'text-[#fff]'}`}>Fullstack Developer</h3>
-              <p className="text-[12px] text-[#C6C6C6] tracking-[1.5px]">
-                THE PLANETSOFT
-              </p>
-            </div>
-            <div>
-              <h3 className={`text-[18px] mt-12 font-semibold ${DarkMode && 'text-[#fff]'}`}>
-                Internship Backend Developer
+              <h3
+                className={`text-[18px] font-semibold ${
+                  DarkMode && "text-[#fff]"
+                }`}
+              >
+                Backend Developer
               </h3>
               <p className="text-[12px] text-[#C6C6C6] tracking-[1.5px]">
                 THE PLANETSOFT
@@ -126,8 +153,8 @@ const Experience = ({ mode }) => {
         </h1>
       </div>
       <div className="w-full flex md:mt-10 flex-col md:flex-row content">
-        <Technologies DarkMode={DarkMode}/>
-        <ExperienceDetails DarkMode={DarkMode}/>
+        <Technologies DarkMode={DarkMode} />
+        <ExperienceDetails DarkMode={DarkMode} />
       </div>
     </div>
   );

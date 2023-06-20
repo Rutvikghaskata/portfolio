@@ -6,8 +6,8 @@ import TextInput from "../InputText";
 
 const Contact = ({ mode }) => {
   const DarkMode = mode === "dark" ? true : false;
-
   const [notification, setNotification] = useState(false);
+  const [timeOutId, setTimeOutId] = useState(null);
   return (
     <div
       id="contact"
@@ -20,7 +20,10 @@ const Contact = ({ mode }) => {
           viewBox="0 0 64 64"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          onClick={() => setNotification(false)}
+          onClick={() => {
+            setNotification(false);
+            clearTimeout(timeOutId);
+          }}
         >
           <g clip-path="url(#clip0_112_2)">
             <path
@@ -69,17 +72,17 @@ const Contact = ({ mode }) => {
         </div>
       </div>
       <div className="flex md:flex-row md:gap-0 gap-10 flex-col w-full my-20 justify-between items-center">
-        <div className="md:w-[30%] w-[70%]">
+        <div className="md:w-[30%] w-[80%]">
           <TextInput placeholder="NAME" />
         </div>
-        <div className="md:w-[30%] w-[70%]">
+        <div className="md:w-[30%] w-[80%]">
           <TextInput placeholder="EMAIL ADDRESS" />
         </div>
-        <div className="md:w-[30%] w-[70%]">
+        <div className="md:w-[30%] w-[80%]">
           <TextInput placeholder="SUBJECT" />
         </div>
       </div>
-      <div className="flex md:w-[100%] w-[70%]">
+      <div className="flex md:w-[100%] w-[80%]">
         <textarea
           placeholder="YOUR MESSAGE HERE"
           rows="5"
@@ -88,7 +91,11 @@ const Contact = ({ mode }) => {
       </div>
       <button
         className="text-[#323bac] font-semibold md:mt-20 mt-10 mb-20 underline"
-        onClick={() => {setNotification(true);setTimeout(()=>setNotification(false),5000)}}
+        onClick={() => {
+          setNotification(true);
+          const timeOutId = setTimeout(() => setNotification(false), 5000);
+          setTimeOutId(timeOutId);
+        }}
       >
         SUBMIT MESSAGE
       </button>

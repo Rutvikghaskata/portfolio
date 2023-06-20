@@ -4,7 +4,9 @@ import "./about.scss";
 
 const SocialLinks = ({ DarkMode }) => {
   const [animate, setAnimate] = useState(true);
-  useEffect(() => {setTimeout(() =>setAnimate(false),4000)}, [])
+  useEffect(() => {
+    setTimeout(() => setAnimate(false), 2000);
+  }, []);
   return (
     <div className="flex md:gap-7 gap-3 ">
       <a
@@ -13,7 +15,7 @@ const SocialLinks = ({ DarkMode }) => {
         rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        } ${animate && 'facebook'}`}
+        } ${animate && "facebook"}`}
       >
         <svg
           width="12"
@@ -36,7 +38,7 @@ const SocialLinks = ({ DarkMode }) => {
         rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        } ${animate && 'instagram'}`}
+        } ${animate && "instagram"}`}
       >
         <svg
           width="24"
@@ -65,7 +67,7 @@ const SocialLinks = ({ DarkMode }) => {
         rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        } ${animate && 'twitter'}`}
+        } ${animate && "twitter"}`}
       >
         <svg
           width="24"
@@ -81,22 +83,22 @@ const SocialLinks = ({ DarkMode }) => {
         </svg>
       </a>
       <a
-        href="https://www.instagram.com/rutvikghaskata_18/"
+        href="https://github.com/Rutvikghaskata"
         target="_blank"
         rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        } ${animate && 'telegram'}`}
+        } ${animate && "telegram"}`}
       >
         <svg
-          width="24"
-          height="22"
-          viewBox="0 0 24 22"
+          width="27"
+          height="26"
+          viewBox="0 0 27 26"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M17.817 21.1035C17.4072 21.1032 17.0106 20.9588 16.6965 20.6955L12.422 17.1335L9.8905 19.6645C9.78562 19.7693 9.65204 19.8406 9.50664 19.8695C9.36124 19.8984 9.21055 19.8835 9.07358 19.8268C8.93662 19.7701 8.81953 19.6741 8.73711 19.5508C8.65469 19.4276 8.61064 19.2827 8.61051 19.1345V14.1085C8.61046 14.01 8.62982 13.9124 8.66748 13.8214C8.70515 13.7304 8.76037 13.6477 8.83 13.578L12.521 9.88701L6.76051 13.727C6.65677 13.7962 6.53744 13.8384 6.4133 13.8498C6.28916 13.8612 6.16413 13.8415 6.04951 13.7925L1.31401 11.763C0.991929 11.625 0.718527 11.3938 0.529002 11.0991C0.339476 10.8044 0.242505 10.4597 0.250572 10.1094C0.25864 9.75911 0.371377 9.41925 0.574269 9.13358C0.777161 8.84791 1.06092 8.62952 1.38901 8.50651L21.3775 1.01051C21.6771 0.898285 22.0018 0.870087 22.3163 0.928962C22.6308 0.987838 22.9232 1.13155 23.1619 1.34456C23.4007 1.55758 23.5767 1.83179 23.6709 2.13757C23.7651 2.44335 23.774 2.76906 23.6965 3.07951L19.523 19.773C19.4518 20.0616 19.308 20.3272 19.1054 20.5447C18.9027 20.7621 18.6479 20.9242 18.365 21.0155C18.1881 21.0734 18.0032 21.1031 17.817 21.1035ZM12.376 15.3685C12.5514 15.3686 12.7213 15.4302 12.856 15.5425L17.656 19.5425C17.6891 19.5705 17.7288 19.5895 17.7714 19.5978C17.8139 19.606 17.8579 19.6031 17.899 19.5895C17.9404 19.5765 17.9777 19.553 18.0072 19.5213C18.0367 19.4896 18.0575 19.4507 18.0675 19.4085L22.2405 2.71551C22.2516 2.67049 22.2502 2.6233 22.2365 2.57902C22.2227 2.53473 22.1972 2.49503 22.1626 2.46417C22.128 2.43332 22.0856 2.41248 22.0401 2.40391C21.9945 2.39534 21.9475 2.39935 21.904 2.41551L1.91551 9.91051C1.86779 9.92848 1.82654 9.96031 1.79706 10.0019C1.76759 10.0435 1.75123 10.093 1.7501 10.144C1.74897 10.1949 1.76312 10.2451 1.79073 10.288C1.81833 10.3308 1.85813 10.3644 1.90501 10.3845L6.26651 12.2535L15.8795 5.84501C16.086 5.70382 16.338 5.64517 16.5857 5.68065C16.8333 5.71613 17.0587 5.84315 17.2173 6.03665C17.3759 6.23015 17.4562 6.47607 17.4423 6.72587C17.4285 6.97568 17.3215 7.21122 17.1425 7.38601L10.1105 14.419V17.3235L11.8455 15.5885C11.9151 15.5188 11.9978 15.4635 12.0889 15.4257C12.1799 15.388 12.2775 15.3685 12.376 15.3685Z"
+            d="M14 1.00256e-06C10.9042 -0.0116755 7.90592 1.0818 5.5445 3.08368C3.18308 5.08557 1.61358 7.86446 1.11836 10.9204C0.623146 13.9763 1.23473 17.1086 2.84309 19.7538C4.45144 22.399 6.95098 24.3834 9.89199 25.35C10.542 25.454 10.75 25.051 10.75 24.7V22.503C7.14899 23.283 6.38199 20.8 6.38199 20.8C6.13921 19.9926 5.61291 19.3001 4.89999 18.85C3.71699 18.044 4.99099 18.07 4.99099 18.07C5.39906 18.1228 5.78992 18.2671 6.13435 18.4923C6.47877 18.7174 6.76786 19.0174 6.97999 19.37C7.3411 20.0121 7.94111 20.4857 8.64952 20.6877C9.35794 20.8898 10.1175 20.804 10.763 20.449C10.8222 19.79 11.1123 19.173 11.582 18.707C8.79999 18.421 5.70599 17.303 5.70599 12.35C5.66839 11.0519 6.1342 9.78954 7.00599 8.827C6.61019 7.70827 6.65669 6.48059 7.13599 5.395C7.13599 5.395 8.22799 5.044 10.711 6.695C12.8399 6.12271 15.0821 6.12271 17.211 6.695C19.694 5.018 20.786 5.395 20.786 5.395C21.2653 6.48059 21.3118 7.70827 20.916 8.827C21.7878 9.78954 22.2536 11.0519 22.216 12.35C22.216 17.316 19.174 18.408 16.275 18.733C16.5872 19.0468 16.8288 19.4238 16.9835 19.8385C17.1382 20.2533 17.2024 20.6964 17.172 21.138V24.7C17.172 25.051 17.38 25.467 18.043 25.35C20.9786 24.3851 23.4746 22.406 25.0833 19.7677C26.692 17.1293 27.3082 14.0041 26.8215 10.9525C26.3348 7.90095 24.777 5.12253 22.4274 3.11544C20.0779 1.10835 17.0901 0.00385606 14 1.00256e-06Z"
             fill="#323BAC"
           />
         </svg>
@@ -107,7 +109,7 @@ const SocialLinks = ({ DarkMode }) => {
         rel="noreferrer"
         className={`flex icon justify-center items-center md:h-12 md:w-12 h-10 w-10 cursor-pointer rounded-full ${
           DarkMode && "dark"
-        } ${animate && 'linkedin'}`}
+        } ${animate && "linkedin"}`}
       >
         <svg
           width="22"
@@ -140,13 +142,15 @@ function About({ mode }) {
       id="about"
       className="w-full flex justify-center items-center flex-col about container md:w-9/12 relative"
     >
-    {DarkMode && <div className="absolute w-[60%] h-[50%] bottom-0 right-0 gradient-01" />}
+      {DarkMode && (
+        <div className="absolute w-[60%] h-[50%] bottom-0 right-0 gradient-01" />
+      )}
       <SocialLinks DarkMode={DarkMode} />
       <div className={`md:mt-20 mt-10 head-wrapper ${DarkMode && "dark"}`}>
         <h1 className={`font-semibold title ${DarkMode && "dark"}`}>ABOUT</h1>
       </div>
       <div className="content w-full flex md:mt-5 flex-col md:flex-row">
-        <div className="md:w-2/4 w-full p-5">
+        <div className="md:w-2/4 w-full p-5 about-content">
           <h1
             className={`font-semibold text-lg mt-5 text-center md:text-star ${
               DarkMode && "text-white"
@@ -154,15 +158,23 @@ function About({ mode }) {
           >
             RUTVIK GHASKATA
           </h1>
-          <p className={`text-[#999] mt-5 text-justify	md:tracking-[.5px] ${DarkMode && 'text-[#ccc]'}`}>
-            I am a Software developer with 2+year experience have experience in
+          <p
+            className={`text-[#999] mt-5 md:text-start md:text-center	md:tracking-[.5px] ${
+              DarkMode && "text-[#ccc]"
+            }`}
+          >
+            I am a Software developer with 2 year experience have experience in
             a variety of platforms, including web, mobile, and desktop
             applications. I also offer services such as software architecture,
             design, testing, and deployment. I pride myself on delivering
             high-quality solutions that are tailored to meet the specific needs
             of our clients.
           </p>
-          <p className={`text-[#999] mt-3 text-justify	md:tracking-[.5px] ${DarkMode && 'text-[#ccc]'}`}>
+          <p
+            className={`text-[#999] mt-3 md:tracking-[.5px] ${
+              DarkMode && "text-[#ccc]"
+            }`}
+          >
             I have experience in web development as well as mobile-app
             development. Currently I’m working in React-js, React-native,
             Angular-js, Nodejs, Next-js.

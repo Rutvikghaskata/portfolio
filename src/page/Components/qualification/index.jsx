@@ -33,7 +33,7 @@ const Experience = ({ mode }) => {
          <div className={`bg-white rounded-[14px] py-[22px] pl-[20px] pr-[50px] card md:w-[350px] ${DarkMode && "dark"}`}>
            <div className="flex  items-center">
              <h1 className="font-bold text-[16px]">Bachelor-Education</h1>
-             <span className="text-[#323bac] text-[13px] font-semibold pl-1">(2019-2022)</span>
+             <span className="text-[#323bac] text-[13px] font-semibold pl-1">(2019 - 2022)</span>
            </div>
            <p className="text-[12px] text-[#B7B6B6] tracking-[2px] mt-2">-Veer Narmad University (VNSGU)</p>
            <div className="flex items-center mt-1">
@@ -45,7 +45,7 @@ const Experience = ({ mode }) => {
          <div className={`bg-white rounded-[14px] py-[22px] pl-[20px] pr-[50px] shadow-2xl card md:w-[350px] ${DarkMode && "dark"}`}>
            <div className="flex  items-center">
              <h1 className="font-bold text-[16px]">Master-Education</h1>
-             <span className="text-[#323bac] text-[13px] font-semibold pl-1">(2022-2024)</span>
+             <span className="text-[#323bac] text-[13px] font-semibold pl-1">(2022 - Present)</span>
            </div>
            <p className="text-[12px] text-[#B7B6B6] tracking-[2px] mt-2">-Jain University (Banglore)</p>
            <div className="flex items-center mt-1">
