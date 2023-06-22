@@ -1,6 +1,6 @@
 import React from "react";
 import Rutvik from "../../../assets/svg-images/resume-rutvik-image.svg";
-import MyResume from "../../../assets/document/rutikghaskata.pdf";
+import MyResume from "../../../assets/document/rutvikghaskata.pdf";
 import "./resume.scss";
 
 const Resume = ({ mode }) => {
