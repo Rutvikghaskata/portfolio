@@ -163,25 +163,25 @@ function About({ mode }) {
               DarkMode && "text-[#ccc]"
             }`}
           >
-            I am a Software developer with 2 year experience have experience in
-            a variety of platforms, including web, mobile, and desktop
-            applications. I also offer services such as software architecture,
-            design, testing, and deployment. I pride myself on delivering
-            high-quality solutions that are tailored to meet the specific needs
-            of our clients.
+            I am a Software Developer with over 4 years of professional experience, skilled in building scalable and high-performing applications across web, mobile, and desktop platforms. My expertise extends to software architecture, UI/UX design, testing, and deployment, ensuring end-to-end delivery of reliable and user-focused solutions.
           </p>
           <p
             className={`text-[#999] mt-3 md:tracking-[.5px] ${
               DarkMode && "text-[#ccc]"
             }`}
           >
-            I have experience in web development as well as mobile-app
-            development. Currently I’m working in React-js, React-native,
-            Angular-js, Nodejs, Next-js.
+            Alongside traditional web and mobile development, I specialize in Frontend Blockchain Development, where I integrate smart contract interactions, wallet connectivity, and decentralized application (dApp) interfaces using modern frameworks.
+          </p>
+          <p
+            className={`text-[#999] mt-3 md:tracking-[.5px] ${
+              DarkMode && "text-[#ccc]"
+            }`}
+          >
+            I work extensively with technologies like React.js, Next.js, AngularJS, Node.js, and React Native, and have hands-on experience in blockchain ecosystems such as Ethereum and aelf. My focus is on creating intuitive, secure, and efficient user experiences that bridge traditional and decentralized technologies.
           </p>
         </div>
         <div className="md:w-2/4 md:flex hidden w-full  justify-center">
-          <img src={Rutvik} alt="" className="image" />
+          <img src={Rutvik} alt="Rutvik" className="image" />
         </div>
       </div>
     </div>
