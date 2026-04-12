@@ -45,11 +45,11 @@ const Experience = ({ mode }) => {
          <div className={`bg-white rounded-[14px] py-[22px] pl-[20px] pr-[50px] shadow-2xl card md:w-[350px] ${DarkMode && "dark"}`}>
            <div className="flex  items-center">
              <h1 className="font-bold text-[16px]">Master-Education</h1>
-             <span className="text-[#323bac] text-[13px] font-semibold pl-1">(2022 - Present)</span>
+             <span className="text-[#323bac] text-[13px] font-semibold pl-1">(2022 - 2024)</span>
            </div>
-           <p className="text-[12px] text-[#B7B6B6] tracking-[2px] mt-2">-Jain University (Banglore)</p>
+           <p className="text-[12px] text-[#B7B6B6] tracking-[2px] mt-2">-Jain University (Online)</p>
            <div className="flex items-center mt-1">
-             <span className="text-[#909090] text-[13px] pl-1">...</span>
+             <span className="text-[#909090] text-[13px] pl-1">90%(9 CGPA)</span>
            </div>
          </div>
       </div>
