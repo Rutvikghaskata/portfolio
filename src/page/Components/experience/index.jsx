@@ -71,7 +71,7 @@ const ExperienceDetails = ({ DarkMode }) => {
               DarkMode && "text-[#525BCC]"
             }`}
           >
-            2023
+            Present
           </p>
           <div className="ml-10">
             <h3
@@ -79,10 +79,10 @@ const ExperienceDetails = ({ DarkMode }) => {
                 DarkMode && "text-[#fff]"
               }`}
             >
-              FullStack Developer
+              Senior Frontend Engineer
             </h3>
             <p className="text-[12px] text-[#C6C6C6] tracking-[1.5px]">
-              DVIJ-INFOTECH
+              Tech Alchemy
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@ const ExperienceDetails = ({ DarkMode }) => {
               DarkMode && "text-[#525BCC]"
             }`}
           >
-            2022
+            2023
           </p>
           <div className="ml-10">
             <div>
@@ -101,7 +101,7 @@ const ExperienceDetails = ({ DarkMode }) => {
                   DarkMode && "text-[#fff]"
                 }`}
               >
-                Frontend Developer
+                FullStack Developer
               </h3>
               <p className="text-[12px] text-[#C6C6C6] tracking-[1.5px]">
                 DVIJ-INFOTECH
