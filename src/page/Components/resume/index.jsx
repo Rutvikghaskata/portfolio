@@ -1,6 +1,6 @@
 import React from "react";
 import Rutvik from "../../../assets/svg-images/resume-rutvik-image.svg";
-import MyResume from "../../../assets/document/rutvikghaskata.pdf";
+import MyResume from "../../../assets/document/rutvikghaskata-resume.pdf";
 import "./resume.scss";
 
 const Resume = ({ mode }) => {
@@ -33,7 +33,7 @@ const Resume = ({ mode }) => {
               DarkMode && "text-[#fff]"
             }`}
           >
-           Software Developer
+           Senior Software Engineer
           </p>
           <p
             className={`text-[#ccc] mt-3 mb-10 text-justify	md:tracking-[.5px] ${
